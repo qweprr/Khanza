@@ -1,0 +1,84 @@
+/* Gaya umum halaman */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Putih abu-abu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Salju */
+.snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snow::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2017/11/13/10/43/snow-2935394_960_720.png');
+    animation: snow 10s infinite linear;
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Container utama */
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Judul */
+h1 {
+    font-size: 3em;
+    color: #555;
+}
+
+/* Form RSVP */
+.rsvp form {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 80%;
+    font-size: 1em;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: #ff9f00;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e67e00;
+}
